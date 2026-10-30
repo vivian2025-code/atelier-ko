@@ -23,25 +23,25 @@ export interface FooterColumn {
 
 export const siteConfig = {
   /** Studio name. Used in the wordmark, metadata, JSON-LD and the footer. */
-  name: "Atelier Kō",
+  name: "MP-AirTag Type Tracker's supplier",
 
   /** One-line positioning statement. Emitted as the Organization slogan. */
-  tagline: "Furniture, made by hand",
+  tagline: "Never lose track of what matters",
 
   /** Default meta description for pages that do not set their own. */
   description:
-    "A small Swedish atelier crafting solid oak, ash and walnut furniture by hand. Made to order in Småland.",
+    "Mass Power maintain a resilient supply chain with over two years of professional experience in AirTag-type tracker projects.",
 
   /** Default <title> for pages that do not set their own. */
-  defaultTitle: "Atelier Kō — Hand-made furniture from the northern woods",
+  defaultTitle: "Mass Power-AirTag Type Tracker's supplier",
 
   /** Contact address, linked in the footer and on the studio page. */
-  email: "email@example.com",
+  email: "info@masspower.com",
 
   /** Used for Organization JSON-LD. */
   location: {
-    region: "Småland",
-    country: "SE",
+    region: "CN",
+    country: "CN",
   },
 
   /** Browser theme colour. Keep in step with `--canvas` in src/styles.css. */
@@ -56,27 +56,27 @@ export const siteConfig = {
     src: "/og-image.png",
     width: 1200,
     height: 630,
-    alt: "Atelier Kō — hand-carved furniture from the northern woods",
+    alt: "Mass Power-AirTag Type Tracker's supplier",
   },
 
   /** Primary navigation, in order. Also drives the mobile menu. */
   navigation: [
     { label: "Index", href: "/" },
     { label: "Catalogue", href: "/catalog" },
-    { label: "Studio", href: "/about" },
+    { label: "About", href: "/about" },
   ] satisfies NavItem[],
 
   /** Short paragraph in the first footer column. */
   footerBlurb:
-    "A two-person workshop in Småland, Sweden. Solid oak, ash and walnut — cut, joined and finished by hand.",
+    "Locate anything, anywhere.",
 
   /** Footer link columns. Add or remove columns freely. */
   footerColumns: [
     {
       heading: "Catalogue",
       links: [
-        { label: "All pieces", href: "/catalog" },
-        { label: "The studio", href: "/about" },
+        { label: "Tracker", href: "/catalog" },
+        { label: "About", href: "/about" },
         { label: "Your cart", href: "/cart" },
       ],
     },
@@ -85,7 +85,7 @@ export const siteConfig = {
       links: [
         { label: "Custom orders", href: "/about#studio" },
         { label: "Trade portal", href: "/about#studio" },
-        { label: "Studio visits", href: "/about#studio" },
+        { label: "Company visits", href: "/about#studio" },
       ],
     },
     {
