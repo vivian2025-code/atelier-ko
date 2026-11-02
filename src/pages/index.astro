@@ -13,27 +13,27 @@ const solo = requireProduct(products, siteConfig.featured.homepageSolo);
 const siteUrl = (Astro.site ?? new URL(Astro.url.origin)).href;
 
 const facts = [
-  { value: "2018", label: "Founded" },
-  { value: siteConfig.location.region, label: "Sweden" },
-  { value: String(products.length).padStart(2, "0"), label: "Pieces" },
-  { value: "03", label: "Timbers" },
+  { value: "2024", label: "Founded" },
+  { value: siteConfig.location.region, label: "CN" },
+  { value: String(products.length).padStart(2, "0"), label: "Items" },
+  { value: "100%", label: "Sample testing" },
 ];
 
 const materials = [
   {
-    name: "European Oak",
-    tag: "Quiet · structural",
-    copy: "A single grade of slow-grown oak from managed forests in southern Sweden. Quarter-sawn for stability.",
+    name: "Concise Design",
+    tag: "Simple · structural ",
+    copy: "Customize your very own unique AirTag-type trackers.",
   },
   {
-    name: "Curved Ash",
-    tag: "Resilient · sprung",
-    copy: "A small reserve from the south coast, steam-bent over custom forms. Used only where the curve earns it.",
+    name: "Better Organized",
+    tag: "Organized · safety",
+    copy: "Say goodbye to the anxiety of losing your important belongings, and make your life better-organized.",
   },
   {
-    name: "American Walnut",
-    tag: "Warm · figured",
-    copy: "Bought in single planks from a family mill in Pennsylvania. The grain decides the piece, not the reverse.",
+    name: "After-Sale Service",
+    tag: "After-sale · update products",
+    copy: "Professional after‑sales support and continuous product updates give us a stronger competitive edge.",
   },
 ];
 
@@ -54,20 +54,20 @@ const organizationSchema = {
 
 <BaseLayout
   title={`${siteConfig.name} — ${siteConfig.tagline}`}
-  description="A small catalogue of seating, tables and storage. Solid oak, ash and walnut, hand-built to order in Småland, Sweden."
+  description="A small catalogue of AirTag-type trackers within mature supply chains."
 >
   <main id="main-content">
     {/* ---------------------------------------------------------------- Hero */}
     <section class="shell grid items-center gap-x-12 gap-y-10 pb-4 pt-8 md:grid-cols-12 md:pb-10 md:pt-12">
       <div class="hero-in md:col-span-5">
-        <h1 class="type-hero">Hand-carved pieces from the northern woods</h1>
+        <h1 class="type-hero">AirTag-Type Trackers</h1>
         <p class="type-lead mt-7 max-w-[42ch]">
-          A small, slow catalogue of seating, tables and storage — solid oak, ash and walnut, shaped by hand and
-          built to outlast the room they were made for.
+          Never lose sight of what matters. With
+          ultra-long battery lifespan of 8 to 48 months.
         </p>
         <div class="mt-9 flex flex-wrap gap-3">
           <a href="/catalog" class="btn btn-primary">Browse the catalogue</a>
-          <a href="/about" class="btn btn-outline">The workshop</a>
+          <a href="/about" class="btn btn-outline">About Us</a>
         </div>
       </div>
 
@@ -109,8 +109,8 @@ const organizationSchema = {
     <section class="shell mt-24 md:mt-36">
       <div class="rule" data-reveal="line"></div>
       <div class="mt-8 flex flex-wrap items-end justify-between gap-x-8 gap-y-4" data-reveal>
-        <h2 class="type-h2 max-w-[14ch]">A few pieces, close to ready</h2>
-        <a href="/catalog" class="link link-mono pb-1.5 text-muted">All six pieces</a>
+        <h2 class="type-h2 max-w-[14ch]">Top Performers</h2>
+        <a href="/catalog" class="link link-mono pb-1.5 text-muted">All products</a>
       </div>
 
       <div class="mt-12 grid gap-x-8 gap-y-14 md:mt-14 md:grid-cols-3">
@@ -149,7 +149,7 @@ const organizationSchema = {
         </div>
 
         <div class="md:col-span-5 lg:col-span-4" data-reveal style="--reveal-delay:140ms">
-          <h2 class="type-h2">One plank, no hardware</h2>
+          <h2 class="type-h2">Trending Now</h2>
           <p class="type-body mt-6 max-w-[44ch]">{solo.description}</p>
 
           <dl class="mono mt-9 border-t border-line text-[0.8125rem]">
@@ -168,7 +168,7 @@ const organizationSchema = {
             }
           </dl>
 
-          <a href={`/products/${solo.slug}`} class="btn btn-primary mt-9">See the piece</a>
+          <a href={`/products/${solo.slug}`} class="btn btn-primary mt-9">See the Product</a>
         </div>
       </div>
     </section>
@@ -176,7 +176,7 @@ const organizationSchema = {
     {/* ----------------------------------------------------------- Materials */}
     <section class="shell mt-24 md:mt-36">
       <div class="rule" data-reveal="line"></div>
-      <h2 class="type-h2 mt-8 max-w-[18ch]" data-reveal>We've spent years learning three timbers</h2>
+      <h2 class="type-h2 mt-8 max-w-[18ch]" data-reveal>Why Choose Us</h2>
 
       <div class="mt-12 grid gap-x-8 gap-y-12 md:grid-cols-3">
         {
