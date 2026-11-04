@@ -1,6 +1,5 @@
 ---
 import { Image } from "astro:assets";
-import CartDrawer from "@/components/CartDrawer.astro";
 import { siteConfig } from "@/config/site";
 import { formatPrice, getProducts, requireProduct } from "@/data/products";
 
@@ -15,7 +14,9 @@ const isActive = (href: string) => (href === "/" ? currentPath === "/" : current
 
 const navItems = siteConfig.navigation;
 const featuredProduct = requireProduct(await getProducts(), siteConfig.featured.mobileMenu);
-const cartIndex = String(navItems.length + 1).padStart(2, "0");
+
+const targetEmail = "info@masspower.com";
+const mailtoLink = `mailto:${targetEmail}?subject=${encodeURIComponent("General Inquiry")}`;
 ---
 
 <header class="site-header sticky top-0 z-50">
@@ -46,16 +47,10 @@ const cartIndex = String(navItems.length + 1).padStart(2, "0");
 
     <div class="flex items-center gap-1">
       <a
-        href="/cart"
-        data-cart-toggle
-        data-cart-label
-        aria-label="Cart, 0 items"
-        aria-expanded="false"
-        aria-controls="cart-drawer-panel"
+        href={mailtoLink}
         class="link-mono -m-2 inline-flex items-center gap-2 p-2 transition-colors hover:text-accent"
       >
-        <span class="hidden sm:inline">Cart</span>
-        <span class="mono text-[0.6875rem]" data-cart-count>00</span>
+        <span>Email us</span>
       </a>
       <button
         type="button"
@@ -120,15 +115,12 @@ const cartIndex = String(navItems.length + 1).padStart(2, "0");
       }
       <li class="menu-item border-b border-line" style={`--i:${navItems.length}`}>
         <a
-          href="/cart"
-          data-cart-label
-          aria-label="Cart, 0 items"
+          href={mailtoLink}
           class="flex items-baseline gap-4 py-5 text-muted transition-colors hover:text-accent"
           data-mobile-menu-link
         >
-          <span class="mono text-[0.6875rem] text-accent">{cartIndex}</span>
-          <span class="type-h3">Cart</span>
-          <span class="mono ml-auto self-center text-[0.6875rem]" data-cart-count>00</span>
+          <span class="mono text-[0.6875rem] text-accent">{String(navItems.length + 1).padStart(2, "0")}</span>
+          <span class="type-h3">Email us</span>
         </a>
       </li>
     </ul>
@@ -157,8 +149,6 @@ const cartIndex = String(navItems.length + 1).padStart(2, "0");
     </a>
   </div>
 </div>
-
-<CartDrawer />
 
 <style>
   .nav-link {
