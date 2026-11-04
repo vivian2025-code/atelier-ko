@@ -77,7 +77,7 @@ export const siteConfig = {
       links: [
         { label: "Tracker", href: "/catalog" },
         { label: "About", href: "/about" },
-        { label: "Your cart", href: "/cart" },
+        { label: "Index", href: "/index" },
       ],
     },
     {
