@@ -33,7 +33,7 @@ const specs = [
 // Pre-formulate the direct mailto link to info@masspower.com
 const targetEmail = "info@masspower.com";
 const emailSubject = encodeURIComponent(`Inquiry about ${product.name}`);
-const emailBody = encodeURIComponent(`Hello,\n\nI am interested in the "${product.name}" (${product.material} · ${product.finish}). I would love to learn more about it or discuss bringing it into my space.\n\n`);
+const emailBody = encodeURIComponent(`Hello,\n\nI am interested in the "${product.name}" (${product.material} · ${product.finish}). \n\n`);
 const mailtoLink = `mailto:${targetEmail}?subject=${emailSubject}&body=${emailBody}`;
 
 const productSchema = {
@@ -143,13 +143,13 @@ const breadcrumbSchema = {
         </dl>
 
         <div class="mt-10">
-          <a
-            href={mailtoLink}
-            class="btn btn-primary block w-full text-center"
-          >
-            Inquire about this piece
-          </a>
-        </div>
+  <a
+    href="mailto:info@masspower.com"
+    class="btn btn-primary block w-full text-center"
+  >
+    Inquire about this piece
+  </a>
+</div>
 
         <p class="mono mt-5 text-[0.6875rem] uppercase leading-relaxed tracking-[0.05em] text-muted">
           If any items catch your eye, please feel free to email me at <a href={mailtoLink} class="link underline">{targetEmail}</a>
